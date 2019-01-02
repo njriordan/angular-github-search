@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { GitSearchService } from './git-search.service';
+import { GitUserSearchService } from './git-user-search.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,10 @@ import { GitSearchService } from './git-search.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GitSearchService],
+  providers: [
+    GitSearchService,
+    GitUserSearchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
