@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GitCodeSearch } from '../git-code-search';
+import { GitCodeSearch } from '../../models/git-code-search';
 
 @Component({
   selector: 'app-code-display',

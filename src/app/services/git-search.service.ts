@@ -1,4 +1,4 @@
-import { GitSearch } from './git-search';
+import { GitSearch } from '../models/git-search';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';

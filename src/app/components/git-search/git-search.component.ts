@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { UnifiedSearchService } from '../unified-search.service';
-import { GitSearch } from '../git-search';
-import { AdvancedSearchModel } from '../advanced-search-model';
+import { UnifiedSearchService } from '../../services/unified-search.service';
+import { GitSearch } from '../../models/git-search';
+import { AdvancedSearchModel } from '../../models/advanced-search-model';
 
 @Component({
   selector: 'app-git-search',

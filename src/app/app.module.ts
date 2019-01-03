@@ -6,17 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { GitSearchService } from './git-search.service';
-import { GitUserSearchService } from './git-user-search.service';
-import { GitCodeSearchService } from './git-code-search.service';
-import { GitSearchComponent } from './git-search/git-search.component';
-import { UnifiedSearchService } from './unified-search.service';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { RepositoryDisplayComponent } from './repository-display/repository-display.component';
-import { CodeDisplayComponent } from './code-display/code-display.component';
-import { FadeDirective } from './fade.directive';
-import { FavoriteTextPipe } from './favorite-text.pipe';
+import { GitSearchService } from './services/git-search.service';
+import { GitUserSearchService } from './services/git-user-search.service';
+import { GitCodeSearchService } from './services/git-code-search.service';
+import { GitSearchComponent } from './components/git-search/git-search.component';
+import { UnifiedSearchService } from './services/unified-search.service';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RepositoryDisplayComponent } from './components/repository-display/repository-display.component';
+import { CodeDisplayComponent } from './components/code-display/code-display.component';
+import { FadeDirective } from './directives/fade.directive';
+import { FavoriteTextPipe } from './pipes/favorite-text.pipe';
 
 @NgModule({
   declarations: [

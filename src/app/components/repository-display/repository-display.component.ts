@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GitSearch } from '../git-search';
+import { GitSearch } from '../../models/git-search';
 
 @Component({
   selector: 'app-repository-display',

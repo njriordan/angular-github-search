@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { publishReplay, refCount } from 'rxjs/operators';
-import { GitCodeSearch } from './git-code-search';
+import { GitCodeSearch } from '../models/git-code-search';
 
 @Injectable({
   providedIn: 'root'
