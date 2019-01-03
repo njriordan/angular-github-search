@@ -19,3 +19,18 @@
 .description {
   font-size:18px;
 }
+.favorite_icon {
+  position: relative;
+  float: right;
+  bottom: 80px;
+  font-size: 36px;
+  cursor: pointer;
+}
+.favorited {
+  color: yellow;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
