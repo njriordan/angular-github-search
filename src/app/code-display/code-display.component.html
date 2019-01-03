@@ -5,7 +5,7 @@ appFade
 *ngFor="let result of searchResults.items; index as i">
   <a [href]="result.html_url">
     <img class="avatar" [src]="result.repository.owner.avatar_url" />
-    <h4 class="title">Code Result: {{result.name}}
+    <h4 class="title">Code Result: {{result.name | favoriteText:checkFavorite(result)}}
       <small> by {{result.repository.owner.login | uppercase}}</small>
     </h4>
   </a>

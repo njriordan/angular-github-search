@@ -16,6 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RepositoryDisplayComponent } from './repository-display/repository-display.component';
 import { CodeDisplayComponent } from './code-display/code-display.component';
 import { FadeDirective } from './fade.directive';
+import { FavoriteTextPipe } from './favorite-text.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FadeDirective } from './fade.directive';
     NotFoundComponent,
     RepositoryDisplayComponent,
     CodeDisplayComponent,
-    FadeDirective
+    FadeDirective,
+    FavoriteTextPipe
   ],
   imports: [
     BrowserModule,
