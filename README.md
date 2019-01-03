@@ -1,10 +1,19 @@
-# GitHub Repo Search - Angular Fundamentals
+# GitHub Repo Search - Angular
 
 ## Background
 
-This repo contains a project I completed as part of Microsoft's [DEV314x Angular Fundamentals](https://www.edx.org/course/angular-fundamentals-2) course. The idea was to create a single-page application using Angular that would allow users to search for GitHub repositories.
+This repo contains a project I completed as part of Microsoft's [DEV315x Advanced Angular](https://www.edx.org/course/advanced-angular-2) and [DEV314x Angular Fundamentals](https://www.edx.org/course/angular-fundamentals-2) courses. The idea was to create a single-page application using Angular that would allow users to perform searches using the GitHub search API.
 
 ## Features
+
+### Topics covered in DEV315x Advanced Angular
+* Forms: Template-Drive Forms, Reactive Forms, Validation.
+* Advanced features of Observables and RxJS.
+* Component interaction.
+* Custom pipes and directives.
+* Angular Univerasal and isomorphic rendering.
+
+### Topics covered in DEV314x Angular Fundamentals
 * TypeScript.
 * Creation and use of services.
 * Creation and use of components.
