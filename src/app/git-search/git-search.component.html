@@ -2,8 +2,9 @@
 <form  (ngSubmit)="sendQuery()" [formGroup]="form">
   <div *ngFor="let key of modelKeys">
     {{key}} <input placeholder="Enter {{key}} here" formControlName="{{key}}" />
+    <div *ngIf="formControls[key].invalid">{{key}} is not valid</div>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" [disabled]="!form.valid">Submit</button>
 </form>
 <div *ngIf="searchResults; else loadingBlock">
   <div *ngIf="searchResults.total_count; else noResultsBlock">

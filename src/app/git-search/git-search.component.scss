@@ -28,3 +28,11 @@
 .description {
   font-size:18px;
 }
+
+/* Form validation */
+.ng-valid:not(form) {
+  border: 2px solid #42A948;
+}
+.ng-invalid:not(form) {
+  border: 2px solid #a94442;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GitSearchService } from '../git-search.service';
 import { GitSearch } from '../git-search';
@@ -24,13 +24,29 @@ export class GitSearchComponent implements OnInit {
     private router: Router
   ) {
     this.modelKeys.forEach((key) => {
-      this.formControls[key] = new FormControl();
+      const validators: Array<ValidatorFn> = [this.noSpecialChars];
+      if (key === 'q') {
+        validators.push(Validators.required);
+      }
+      if (key === 'stars') {
+        validators.push(Validators.maxLength(4));
+      }
+      this.formControls[key] = new FormControl(this.model[key], validators);
     });
     this.form = new FormGroup(this.formControls);
   }
 
   model = new AdvancedSearchModel('', '', '', null, null, '');
   modelKeys = Object.keys(this.model);
+
+  noSpecialChars (c: FormControl) {
+    const regExp = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+    return regExp.test(c.value) ? {
+      validateEmail: {
+        valid: false
+      }
+    } : null;
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe( (params: ParamMap) => {
