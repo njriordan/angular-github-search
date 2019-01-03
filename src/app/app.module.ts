@@ -13,13 +13,17 @@ import { GitSearchComponent } from './git-search/git-search.component';
 import { UnifiedSearchService } from './unified-search.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RepositoryDisplayComponent } from './repository-display/repository-display.component';
+import { CodeDisplayComponent } from './code-display/code-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitSearchComponent,
     HomePageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RepositoryDisplayComponent,
+    CodeDisplayComponent
   ],
   imports: [
     BrowserModule,

@@ -7,28 +7,16 @@
   <button type="submit" [disabled]="!form.valid">Submit</button>
 </form>
 <div *ngIf="searchResults; else loadingBlock">
-  <div *ngIf="searchResults.total_count; else noResultsBlock">
+  <div *ngIf="searchResults.repositories.total_count || searchResults.code.total_count; else noResultsBlock">
     <ng-container *ngTemplateOutlet="resultsBlock"></ng-container>
   </div>
 </div>
 
 <ng-template #resultsBlock>
-  <h3 class='total'>Total Results: {{searchResults.total_count}}</h3>
-  <ul class="list">
-    <li
-    [ngClass]="{'even': (i % 2 === 0), 'odd': (i % 2 !== 0)}"
-    class="list_item"
-    *ngFor="let result of searchResults.items; index as i">
-      <a [href]="result.html_url">
-        <img class="avatar" [src]="result.owner.avatar_url" />
-        <h4 class="title">{{result.name}}
-          <small> by {{result.owner.login | uppercase}}</small>
-        </h4>
-      </a>
-      <p class="description">{{result.description}}</p>
-      <p> Created On: {{result.created_at | date:'fullDate'}} </p>
-    </li>
-  </ul>
+    <ul class="list">
+      <app-repository-display [searchResults]="searchResults.repositories" *ngIf="searchResults.repositories"></app-repository-display>
+      <app-code-display [searchResults]="searchResults.code" *ngIf="searchResults.code"></app-code-display>
+    </ul>
 </ng-template>
 
 <ng-template #noResultsBlock>No results found.</ng-template>
