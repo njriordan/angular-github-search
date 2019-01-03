@@ -8,7 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { GitSearchService } from './git-search.service';
 import { GitUserSearchService } from './git-user-search.service';
+import { GitCodeSearchService } from './git-code-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
+import { UnifiedSearchService } from './unified-search.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -28,7 +30,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   providers: [
     GitSearchService,
-    GitUserSearchService
+    GitUserSearchService,
+    GitCodeSearchService,
+    UnifiedSearchService
   ],
   bootstrap: [AppComponent]
 })
